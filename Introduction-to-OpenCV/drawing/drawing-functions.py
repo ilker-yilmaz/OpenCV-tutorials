@@ -35,7 +35,7 @@ cv2.polylines(canvas, [np.array([p1, p2, p3,p4,])], True, (0, 0, 0), 5)
 
 # Add text
 font = cv2.FONT_HERSHEY_SIMPLEX
-cv2.putText(canvas, 'OpenCV', (10, 500), font, 4, (255, 255, 255), 2, cv2.LINE_AA) # 'OpenCV', (10,500), font, 4, white, 2px, anti-aliasing
+cv2.putText(canvas, 'OpenCV', (30, 400), font, 4, (0, 0, 0), 2, cv2.LINE_AA) # 'OpenCV', (10,500), font, 4, white, 2px, anti-aliasing
 
 
 cv2.imshow("Canvas", canvas) # show the canvas
