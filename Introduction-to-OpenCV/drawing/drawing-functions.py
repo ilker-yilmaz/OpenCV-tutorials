@@ -20,6 +20,19 @@ pts = np.array([[10, 5], [20, 30], [70, 20], [50, 10]], np.int32)
 pts = pts.reshape((-1, 1, 2))
 cv2.polylines(canvas, [pts], True, (0, 255, 255)) # True means close the polygon
 
+p1 = (100, 100)
+p2 = (200, 200)
+p3 = (300, 100)
+p4 = (200, 0)
+
+# Draw a triangle
+cv2.line(canvas, p1, p2, (0, 0, 0), 5)
+cv2.line(canvas, p2, p3, (0, 0, 0), 5)
+cv2.line(canvas, p3, p1, (0, 0, 0), 5)
+
+# draw poliylines
+cv2.polylines(canvas, [np.array([p1, p2, p3,p4,])], True, (0, 0, 0), 5)
+
 # Add text
 font = cv2.FONT_HERSHEY_SIMPLEX
 cv2.putText(canvas, 'OpenCV', (10, 500), font, 4, (255, 255, 255), 2, cv2.LINE_AA) # 'OpenCV', (10,500), font, 4, white, 2px, anti-aliasing
